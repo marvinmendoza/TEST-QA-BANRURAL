@@ -9,3 +9,19 @@
  const lowOrHi = document.querySelector('lowOrHi'); // en la declaración de la variable falto el punto que nos permite mostrar el mensaje en el laber.
    
  let userGuess = (guessField.value); // a la varible se le debe de pasar Numbre para que reconozca los números ingresados Number(guessField.value);.
+
+//los mensajes estan en un orden diferente, debido a que la comparación que estamos realizando no podemos decir que ha perdido si el número ingresado es correcto
+if(userGuess === randomNumber) {
+      lastResult.textContent = '!!!Pérdistes!!!';
+ // o felicitarlo que debido a que llego al límite de oportunidades que tenia.
+    } else if(guessCount === ATTEMPS) {
+      lastResult.textContent = 'Felicitaciones! adivinaste el número!';
+      
+      //lo ideal es
+       if(guessCount === ATTEMPS) { 
+      lastResult.textContent = '!!!Pérdistes!!!';
+
+    } else if(userGuess === randomNumber) { 
+      lastResult.textContent = 'Felicitaciones! adivinaste el número!';
+ 
+     
