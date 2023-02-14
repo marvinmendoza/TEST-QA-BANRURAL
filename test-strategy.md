@@ -7,6 +7,11 @@
  const ATTEMPS = 5;  // el valor de ATTEMPS debe de ser 10 debido a que es nuestro límite de oportunidades.
  
  const lowOrHi = document.querySelector('lowOrHi'); // en la declaración de la variable falto el punto que nos permite mostrar el mensaje en el laber.
+ 
+ //la creación de la variable randomNumber debe de multiplicarse *100 debido a que es el número máximo que deseamos y sumarle 1, debido a que si solo lo dejamos así
+ //solamente llega a 99, quitarle los decimales con Math.floor
+  let randomNumber = Math.random() * 10;
+   let randomNumber = Math.floor(Math.random() * 100) + 1; //así quedaría
    
  let userGuess = (guessField.value); // a la varible se le debe de pasar Numbre para que reconozca los números ingresados Number(guessField.value);.
 
